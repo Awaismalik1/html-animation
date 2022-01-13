@@ -1,0 +1,278 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(191, 248, 248);
+    display: grid;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    place-items: center;
+    font-family: poppins;
+    margin-top: 10px;
+    overflow: auto;
+}
+
+.brand-title {
+    font-size: 22px;
+    color: #2007ff;
+    font-family: "Arial Black", Gadget, sans-serif;
+    margin-top: 20px;
+}
+
+.focus {
+    position: absolute;
+    width: 350px;
+    height: 55px;
+    font-size: 10px;
+    text-align: center;
+    opacity: 0.7;
+    margin-top: 0px;
+    margin-bottom: 550px;
+    background: #ecf0f3;
+    border-radius: 15px;
+    box-shadow: 14px 14px 20px #96c0eb, -14px -14px 20px rgb(151, 217, 255);
+}
+
+.focus:before {
+    content: "Enigmatix Software House";
+    filter: blur(3px);
+    color: rgb(99, 99, 245);
+    text-align: center;
+    font-size: 25px;
+    left: 10px;
+    top: 10px;
+}
+
+.focus:after {
+    content: "";
+    width: 50px;
+    height: calc(100% + 8px);
+    align-content: center;
+    top: 4px;
+    margin-top: 20px;
+    left: 0;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+}
+
+.focus--mask {
+    overflow: hidden;
+    position: absolute;
+    width: 35px;
+    height: 100%;
+    left: 25px;
+    bottom: 0px;
+    background: #f8f8f8;
+    -webkit-animation: mask-move 3s linear infinite alternate;
+    animation: mask-move 3s linear infinite alternate;
+    border-radius: 5px;
+}
+
+.focus--mask-inner {
+    -webkit-animation: mask-inner-move 3s linear infinite alternate;
+    animation: mask-inner-move 3s linear infinite alternate;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 85px;
+    color: rgb(108, 108, 248);
+    margin-bottom: 100px;
+}
+
+.container {
+    position: relative;
+    width: 350px;
+    height: 470px;
+    border-radius: 20px;
+    padding: 40px;
+    margin-top: -820px;
+    box-sizing: border-box;
+    box-shadow: 14px 14px 20px #56b9b1, -14px -14px 20px #56b9b1;
+}
+
+.brand-logo {
+    height: 100px;
+    width: 100px;
+    background: url("enigmatix.jpg");
+    margin: auto;
+    margin-bottom: 0px;
+    background-color: #ecf0f3;
+    border-radius: 50%;
+    box-sizing: border-box;
+    box-shadow: 7px 7px 20px #316da8, -7px -5px 20px rgb(169, 216, 248);
+    animation: rotation 20s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.inputs {
+    text-align: left;
+    margin-top: 30px;
+}
+
+label,
+input,
+button {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+label {
+    margin-bottom: 4px;
+}
+
+label:nth-of-type(2) {
+    margin-top: 12px;
+}
+
+input::placeholder {
+    color: gray;
+}
+
+input {
+    background-color: transparent;
+    padding: 10px;
+    padding-left: 20px;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    box-shadow: inset 6px 6px 6px #96c0eb, inset -6px -6px 6px #96c0eb;
+}
+
+button {
+    margin-top: 20px;
+    background: blue;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 900;
+    transition: 0.5s;
+}
+
+.carousel {
+    animation: rotate 30s linear infinite;
+    margin-top: 310px;
+    margin-right: 1820px;
+    transform-style: preserve-3d;
+}
+
+.carousel2 {
+    animation: rotate 30s linear infinite;
+    margin-top: 300px;
+    margin-left: 850px;
+    transform-style: preserve-3d;
+}
+
+.item {
+    position: absolute;
+    background: rgb(216, 22, 22);
+    width: 25px;
+    height: 50px;
+    line-height: 200px;
+    font-size: 2em;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    opacity: 0.95;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.a {
+    transform: rotateY(0deg) translateZ(200px);
+    background: #ed1c24;
+}
+
+.b {
+    transform: rotateY(45deg) translateZ(200px);
+    background: #0072bc;
+}
+
+.d {
+    transform: rotateY(90deg) translateZ(200px);
+    background: #f26522;
+}
+
+.e {
+    transform: rotateY(135deg) translateZ(200px);
+    background: #fa8cf6;
+}
+
+.f {
+    transform: rotateY(180deg) translateZ(200px);
+    background: #fcc38b;
+}
+
+.g {
+    transform: rotateY(225deg) translateZ(200px);
+    background: #f8a884;
+}
+
+.h {
+    transform: rotateY(270deg) translateZ(200px);
+    background: #ffa5fc;
+}
+
+.i {
+    transform: rotateY(315deg) translateZ(200px);
+    background: #fcbe81;
+}
+
+.j {
+    transform: rotateY(360deg) translateZ(200px);
+    background: #ff9393;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotateX(360deg)
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+@-webkit-keyframes mask-move {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(290px);
+    }
+}
+
+@keyframes mask-move {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(290px);
+    }
+}
+
+@-webkit-keyframes mask-inner-move {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-280px);
+    }
+}
+
+@keyframes mask-inner-move {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-280px);
+    }
+}
